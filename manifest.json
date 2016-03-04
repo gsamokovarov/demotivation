@@ -7,7 +7,7 @@
       "newtab": "dashboard.html"
    },
    "content_security_policy": "script-src 'self' 'unsafe-eval'; object-src 'self'",
-   "description": "Replace new tab page with pixelized troll faces.",
+   "description": "Everybody needs some.",
    "icons": {
       "128": "icon-128.png",
       "64": "icon-64.png",
@@ -16,6 +16,7 @@
    },
    "manifest_version": 2,
    "name": "Demotivation",
+   "short_name": "Demotivation",
    "offline_enabled": true,
-   "version": "0.1"
+   "version": "0.2"
 }
