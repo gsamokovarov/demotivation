@@ -4,7 +4,7 @@ document.addEventListener("DOMContentLoaded", function() {
   };
 
   var images = ["regular_troll.png", "broken_troll.png"];
-  var randomImageIndex = between(Math.floor(Math.random() * 2), 0, 1);
+  var randomImageIndex = between(Math.floor(Math.random() * images.length), 0, images.length - 1);
 
   var troll = document.getElementById('troll');
   troll.src = "images/" + images[randomImageIndex];
