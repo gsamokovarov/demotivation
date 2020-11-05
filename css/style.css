@@ -1,21 +1,9 @@
-* {
-  box-sizing: border-box;
-}
+* { box-sizing: border-box; }
 
-body, html {
-  margin: 0;
-  padding: 0;
-  height: 100%;
-}
+body, html { background: white; margin: 0; padding: 0; height: 100%; }
+body { display: flex; flex-direction: row; align-items: center; justify-content: center; }
+img { width: auto; height: 50%; }
 
-body {
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  justify-content: center;
-}
-
-img {
-  width: auto;
-  height: 50%;
+@media (prefers-color-scheme: dark) {
+  body { filter: invert(100%); }
 }

@@ -1,12 +1,14 @@
-document.addEventListener("DOMContentLoaded", function() {
-  var between = function(value, min, max) {
-    return value < min ? min : (value > max ? max : value);
-  };
+const images = ["regular_troll.png", "broken_troll.png"]
 
-  var images = ["regular_troll.png", "broken_troll.png"];
-  var randomImageIndex = between(Math.floor(Math.random() * images.length), 0, images.length - 1);
+const between = (value, min, max) =>
+  value < min
+    ? min
+    : (value > max ? max : value)
 
-  var troll = document.getElementById('troll');
-  troll.src = "images/" + images[randomImageIndex];
-});
+const randomIndex = between(Math.floor(Math.random() * images.length), 0, images.length - 1)
+
+document.addEventListener("DOMContentLoaded", () => {
+  const troll = document.getElementById('troll')
+  troll.src = "images/" + images[randomIndex]
+})
 
