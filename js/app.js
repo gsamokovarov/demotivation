@@ -1,14 +1,15 @@
-const images = ["regular_troll.png", "broken_troll.png"]
+const IMAGES = ["regular_troll.png", "broken_troll.png", "ego_troll.png"];
 
 const between = (value, min, max) =>
-  value < min
-    ? min
-    : (value > max ? max : value)
-
-const randomIndex = between(Math.floor(Math.random() * images.length), 0, images.length - 1)
+  value < min ? min : value > max ? max : value;
 
 document.addEventListener("DOMContentLoaded", () => {
-  const troll = document.getElementById('troll')
-  troll.src = "images/" + images[randomIndex]
-})
+  const randomIndex = between(
+    Math.floor(Math.random() * IMAGES.length),
+    0,
+    IMAGES.length - 1
+  );
 
+  const trollImg = document.getElementById("troll");
+  trollImg.src = "images/" + IMAGES[randomIndex];
+});
